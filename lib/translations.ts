@@ -6,7 +6,7 @@ export const translations = {
       cta: 'Request a Demo',
     },
     hero: {
-      badge: 'US Market Launch Soon',
+      badge: 'Launching Soon',
       headline: 'Count less.\nCare more.',
       sub: 'EXION combines AI and robotics to automate pharmacy operations,\nimproving accuracy, efficiency, and patient safety.',
       cta1: 'Request a Demo',
