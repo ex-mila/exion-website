@@ -28,7 +28,7 @@ export default function Products({ t, lang }: ProductsProps) {
           }
         });
       },
-      { threshold: 0.08 }
+      { threshold: 0, rootMargin: "0px 0px -80px 0px" }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -37,11 +37,11 @@ export default function Products({ t, lang }: ProductsProps) {
   const [featured, ...rest] = t.roadmap;
 
   return (
-    <section id="products" ref={ref} className="min-h-screen flex flex-col justify-center py-24 bg-white">
+    <section id="products" ref={ref} className="min-h-screen flex flex-col justify-center py-14 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
 
         {/* Header */}
-        <div className="max-w-2xl mb-14">
+        <div className="max-w-2xl mb-8">
           <span className="reveal inline-block text-xs font-bold text-[#009973] tracking-widest uppercase mb-4">
             {t.tag}
           </span>
@@ -59,8 +59,8 @@ export default function Products({ t, lang }: ProductsProps) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
 
           {/* EXION DX — featured */}
-          <div className="reveal reveal-delay-1 bg-gradient-to-br from-[#009973] to-[#006b52] rounded-3xl p-8 lg:p-10 flex flex-col shadow-xl shadow-[#009973]/20">
-            <div className="flex items-center gap-2.5 mb-8">
+          <div className="reveal reveal-delay-1 bg-gradient-to-br from-[#009973] to-[#006b52] rounded-3xl p-7 lg:p-8 flex flex-col shadow-xl shadow-[#009973]/20">
+            <div className="flex items-center gap-2.5 mb-5">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 border border-white/30">
                 <span className="relative flex w-1.5 h-1.5 shrink-0">
                   <span className="animate-ping absolute inline-flex w-full h-full rounded-full bg-white opacity-60" />
@@ -75,10 +75,10 @@ export default function Products({ t, lang }: ProductsProps) {
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 tracking-tight">
               {featured.name}
             </h3>
-            <p className="text-sm text-white/85 leading-relaxed mb-8">
+            <p className="text-sm text-white/85 leading-relaxed mb-5">
               {featured.desc}
             </p>
-            <div className="border-t border-white/20 pt-7 mt-auto flex flex-col gap-5">
+            <div className="border-t border-white/20 pt-5 mt-auto flex flex-col gap-4">
               {t.checklist.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-lg bg-white/20 flex items-center justify-center shrink-0 mt-0.5 text-white">
@@ -97,9 +97,9 @@ export default function Products({ t, lang }: ProductsProps) {
           {rest.map((item, i) => (
             <div
               key={i}
-              className={`reveal reveal-delay-${i + 2} bg-[#F9FAFB] border border-[#EFEFEF] rounded-3xl p-8 lg:p-10 flex flex-col`}
+              className={`reveal reveal-delay-${i + 2} bg-[#F9FAFB] border border-[#EFEFEF] rounded-3xl p-7 lg:p-8 flex flex-col`}
             >
-              <div className="flex items-center gap-2 mb-8">
+              <div className="flex items-center gap-2 mb-5">
                 <span className="relative flex w-1.5 h-1.5 shrink-0">
                   <span className="animate-pulse absolute inline-flex w-full h-full rounded-full bg-[#D1D5DB]" />
                   <span className="relative inline-flex w-1.5 h-1.5 rounded-full bg-[#D1D5DB]" />

@@ -21,7 +21,7 @@ export default function Problem({ t, lang }: ProblemProps) {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0, rootMargin: "0px 0px -80px 0px" }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -33,7 +33,7 @@ export default function Problem({ t, lang }: ProblemProps) {
 
         {/* Header */}
         <div className="max-w-3xl mb-16">
-          <span className="reveal inline-block text-xs font-bold text-[#009973] tracking-widest uppercase mb-5">
+          <span className="reveal inline-block text-xs font-bold text-[#E8455A] tracking-widest uppercase mb-5">
             {t.tag}
           </span>
           <h2 className={`reveal reveal-delay-1 ${isKo ? "text-2xl md:text-3xl lg:text-4xl" : "text-3xl md:text-4xl lg:text-5xl"} xl:text-5xl font-bold leading-[1.15] tracking-tight mb-6`}>

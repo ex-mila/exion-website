@@ -36,9 +36,22 @@ export default function Hero({ t, lang, onDemoClick }: HeroProps) {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg text-[#111827]/55 leading-relaxed mb-10 whitespace-pre-line">
+            <p className="text-base sm:text-lg text-[#111827]/55 leading-relaxed mb-8 whitespace-pre-line">
               {t.sub}
             </p>
+
+            {/* Mobile image */}
+            <div className="flex items-center justify-center mb-8 lg:hidden">
+              <Image
+                src="/images/logo_s.png"
+                alt="EXION"
+                width={600}
+                height={600}
+                className="w-full max-w-[280px] h-auto object-contain"
+                priority
+                quality={90}
+              />
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -60,7 +73,7 @@ export default function Hero({ t, lang, onDemoClick }: HeroProps) {
             </div>
 
             {/* Stats */}
-            <div className="flex items-center gap-8 pt-8 border-t border-[#111827]/08">
+            <div className="flex items-center gap-5 sm:gap-8 pt-8 border-t border-[#111827]/08">
               {t.stats.map((stat, i) => (
                 <div key={i}>
                   <div className="text-xl font-bold text-[#111827] tabular-nums">{stat.value}</div>
@@ -71,8 +84,8 @@ export default function Hero({ t, lang, onDemoClick }: HeroProps) {
 
           </div>
 
-          {/* Right: logo image */}
-          <div className="flex items-center justify-center lg:justify-end">
+          {/* Right: logo image (desktop only) */}
+          <div className="hidden lg:flex items-center justify-end">
             <Image
               src="/images/logo_s.png"
               alt="EXION"

@@ -21,7 +21,7 @@ export default function Mission({ t, lang }: MissionProps) {
           }
         });
       },
-      { threshold: 0.08 }
+      { threshold: 0, rootMargin: "0px 0px -80px 0px" }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
