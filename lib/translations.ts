@@ -8,20 +8,29 @@ export const translations = {
     hero: {
       badge: 'Launching Soon',
       headline: 'Count less.\nCare more.',
-      sub: 'EXION combines AI and robotics to automate pharmacy operations,\nimproving accuracy, efficiency, and patient safety.',
+      sub: 'EXION combines AI and robotics to automate pharmacy operations, improving accuracy, efficiency, and patient safety.',
       cta1: 'Request a Demo',
       cta2: 'See How It Works',
       stats: [
-        { value: '99.9%+', label: 'Counting Accuracy' },
-        { value: '<30s', label: 'Per Prescription' },
-        { value: '0', label: 'Miscounts in Pilot' },
+        {
+          value: 'On-Device AI',
+          label: 'Real-time pill counting \nand classification',
+        },
+        {
+          value: 'Display Tray',
+          label: 'Visual guidance \nwhere pills are handled',
+        },
+        {
+          value: 'Hygienic',
+          label: 'Detachable, water-washable \npill-contact parts',
+        },
       ],
     },
     problem: {
       tag: 'The Problem',
       headline: 'Manual counting is',
       headlineAccent: 'breaking pharmacies.',
-      sub: 'A single miscount can reach a patient. Manual pill counting makes this risk inevitable — every single day.',
+      sub: 'A single miscount can reach a patient. Manual pill counting makes this risk inevitable, every single day.',
       stats: [
         {
           value: '6.9B',
@@ -59,8 +68,8 @@ export const translations = {
         },
         {
           year: '2028',
-          badge: 'Coming Soon',
-          name: 'EXION V-1',
+          badge: 'In Development',
+          name: 'EXION CX',
           desc: 'Intelligent medication storage cabinet. Automated dispensing and inventory management at the point of care.',
         },
       ],
@@ -155,9 +164,15 @@ export const translations = {
       cta1: '데모 신청',
       cta2: '작동 방식 보기',
       stats: [
-        { value: '99.9%+', label: '조제 정확도' },
-        { value: '<30초', label: '처방당 소요 시간' },
-        { value: '0건', label: '파일럿 오계수' },
+        { value: '온디바이스 AI', label: '실시간 알약 카운팅 및 분류' },
+        {
+          value: '디스플레이 트레이',
+          label: '알약 작업 공간에 표시되는 시각 가이드',
+        },
+        {
+          value: '위생적 설계',
+          label: '세척이 용이한 모듈형 설계',
+        },
       ],
     },
     problem: {
@@ -203,7 +218,7 @@ export const translations = {
         {
           year: '2028',
           badge: '출시 예정',
-          name: 'EXION V-1',
+          name: 'EXION CX',
           desc: '지능형 약품 보관 캐비닛. 로봇 기반 자동 이송을 통해 조제 효율과 실시간 재고 관리를 동시에 지원합니다.',
         },
       ],
